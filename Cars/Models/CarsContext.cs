@@ -6,9 +6,7 @@ namespace Cars.Models
 {
     public partial class CarsContext : DbContext
     {
-        public CarsContext()
-        {
-        }
+        
 
         public CarsContext(DbContextOptions<CarsContext> options)
             : base(options)
@@ -26,7 +24,6 @@ namespace Cars.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 optionsBuilder.UseSqlServer("Server=DESKTOP-485I5P3;Database=Cars;Trusted_Connection=True;");
             }
         }
